@@ -5,12 +5,12 @@ import Image from 'next/image'
 
 function Hero() {
   return (
-    <div className='h-[44rem] bg-[#fafafa] flex flex-row'>
-        <div className="relative flex flex-col justify-center items-start px-[10rem] w-[46rem] gap-[2rem] mt-[-2rem]">
+    <div className='h-[42rem] bg-[#fafafa] flex flex-row'>
+        <div className="flex flex-col justify-center items-start px-[10rem] w-[46rem] gap-[2rem] mt-[-2rem]">
             <h1 className='text-[3rem] leading-[4rem] text-[#363636]'>
                 Next generation digital banking
             </h1>
-            <p className='mt-[-1rem] text-[#808080]'>
+            <p className='mt-[-1rem] text-[#ababab]'>
                 Take your financial life online. Your Easybank account will be a one-stop-shop 
                 for spending, saving, budgeting, investing, and much more.
             </p>
@@ -23,14 +23,14 @@ function Hero() {
                 <Image
                     src={bgImg1}
                     alt=""
-                    className='mt-[-10rem] relative ml-[40rem] '
+                    className='mt-[-11rem] relative ml-[40rem] '
                 />
             </div>
             <div >
                 <Image
                     src={bgImg2}
                     alt=""
-                    className=' mt-[-55rem] relative ml-[54rem] z-0'
+                    className=' mt-[-54rem] relative ml-[54rem] z-0'
                 />
             </div>
         </div>
