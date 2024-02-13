@@ -18,7 +18,7 @@ function Navbar() {
   return (
     <div>
         {/* Desktop view */}
-        <nav className="hidden md:flex relative top-0 left-0 right-0 z-50 border-b-2 bg-white border-white h-[6rem] flex flex-row justify-between items-center px-[10rem]">
+        <nav className="hidden md:flex relative top-0 left-0 right-0 z-50 border-b-2 bg-white border-white h-[5rem] flex flex-row justify-between items-center px-[10rem]">
             <div>
                 <Image
                     src={Logo}
@@ -27,84 +27,33 @@ function Navbar() {
             </div>
 
             <div className="flex flex-row gap-[2rem]">
-                <h1 className="text-gray-400 hover:text-black transition-colors duration-300 font-medium cursor-pointer">
+                <h1 className="nav-link text-gray-400 hover:text-black hover:font-semibold transition-colors duration-300 font-medium cursor-pointer">
                     Home
                 </h1>
-                <h1 className="text-gray-400 hover:text-black transition-colors duration-300 font-medium cursor-pointer">
+                <h1 className="nav-link text-gray-400 hover:text-black hover:font-semibold transition-colors duration-300 font-medium cursor-pointer">
                     About
                 </h1>
-                <h1 className="text-gray-400 hover:text-black transition-colors duration-300 font-medium cursor-pointer">
+                <h1 className="nav-link text-gray-400 hover:text-black hover:font-semibold transition-colors duration-300 font-medium cursor-pointer">
                     Contact
                 </h1>
-                <h1 className="text-gray-400 hover:text-black transition-colors duration-300 font-medium cursor-pointer">
+                <h1 className="nav-link text-gray-400 hover:text-black hover:font-semibold transition-colors duration-300 font-medium cursor-pointer">
                     Blog
                 </h1>
-                <h1 className="text-gray-400 hover:text-black transition-colors duration-300 font-medium cursor-pointer">
+                <h1 className="nav-link text-gray-400 hover:text-black hover:font-semibold transition-colors duration-300 font-medium cursor-pointer">
                     Careers
                 </h1>
             </div>
 
             <div>
-                <button className="w-[11.5rem] h-[3.2rem] rounded-[2rem] bg-gradient-to-r from-green-400 to-cyan-500 text-white ">
+                <button className="w-[11.5rem] h-[3.2rem] rounded-[2rem] bg-gradient-to-r from-green-400 to-cyan-500 text-white hover:opacity-55 transition-opacity duration-300">
                     Request invite
                 </button>
             </div>
         </nav>
 
         {/* Mobile view */}
-        {/* <nav className="flex md:hidden relative top-0 left-0 right-0 z-50 border-b-2 bg-white border-white h-[5rem] flex flex-row justify-between items-center px-[1.5rem]">
-            <div>
-                <Image
-                    src={Logo}
-                    alt=""
-                    className=''
-                />
-            </div>
-            {isMobileView && !menuOpen ? (
-                <div className="md:hidden mt-[0.3rem]">
-                    <button onClick={toggleMenu}>
-                        <Image
-                            src={openIcon}
-                            alt=''
-                        />
-                        <Icon
-                            icon="line-md:close-to-menu-alt-transition"
-                            class="text-white cursor-pointer text-3xl sm:text-3xl"
-                        />
-                    </button>
-                </div>
-        ) : (
-            <div className="md:hidden mt-[0.3rem]">
-                <button onClick={toggleMenu}>
-                    <Image
-                        src={closeIcon}
-                        alt=''
-                    />
-                    <Icon
-                        icon="line-md:menu-to-close-alt-transition"
-                        class="text-white cursor-pointer text-3xl sm:text-3xl"
-                    />
-                </button>
-            </div>
-        )}
-
-        Sidebar content
-        {isMobileView && menuOpen && (
-           <div>
-
-           </div>
-        )}
-            </nav>
-
-            {isMobileView && menuOpen && (
-            <>
-            <div>Home</div>
-            <div>About</div>
-            <div>Contact</div>
-            </>
-        )} */}
         <div className="block md:hidden fixed top-0 left-0 z-50 w-full">
-            <div className="flex justify-between border-b-2 bg-white border-white items-center px-[1.5rem] h-[5rem] py-2">
+            <div className="flex justify-between border-b-2 bg-white border-white items-center px-[1.5rem] h-[4.5rem] py-2">
                 <div>
                     <Image
                         src={Logo}

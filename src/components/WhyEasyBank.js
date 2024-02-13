@@ -52,7 +52,7 @@ function WhyEasyBank() {
             <h2 className='text-[1.4rem] font-medium '>
               {item.header}
             </h2>
-            <p className='text-[#808080]'>
+            <p className='text-[#808080] leading-[1.7rem]'>
               {item.paragraph}
             </p>
           </div>
@@ -61,7 +61,7 @@ function WhyEasyBank() {
       </div>
 
       {/* Mobile view */}
-      <div className='flex flex-col items-center md:hidden h-[84rem] bg-[#f0f1f4] px-[1rem]'>
+      <div className='flex flex-col items-center md:hidden h-[88rem] bg-[#f0f1f4] px-[1rem]'>
         <div>
           <h1 className='text-[2rem] mt-[6rem] leading-[2.5rem] text-center text-[#363636]'>
             Why Choose <br/> EasyBank?
@@ -72,7 +72,7 @@ function WhyEasyBank() {
           </p>
         </div>
 
-        <div className='flex flex-col justify-center items-center mt-[3rem] gap-[2.5rem]'>
+        <div className='flex flex-col justify-center items-center mt-[4.55rem] gap-[2.5rem]'>
           {data.map((item, index) => (
           <div key={index} className='flex justify-center items-center flex-col gap-[1.2rem]'>
             <Image

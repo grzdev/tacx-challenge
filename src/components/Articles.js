@@ -34,30 +34,68 @@ const data = [
 
 function Articles() {
   return (
-    <div className='h-[48rem] bg-[#fafafa] flex justify-center items-start gap-[3rem] px-[10rem] flex-col'>
-        <h1 className='text-[2.5rem] text-[#363636] mt-[3rem]'>
-            Latest Articles
+    <div>
+      {/* Desktop view */}
+      <div className='h-[48rem] bg-[#fafafa] hidden md:flex justify-center items-start gap-[3rem] px-[10rem] flex-col'>
+        <h1 className='text-[2.5rem] text-[#363636] mt-[-1rem]'>
+          Latest Articles
         </h1>
-        <div  className='flex flex-row gap-[1.5rem]'>
-            {data.map((item, index) => (
+        <div className='flex flex-row gap-[1.5rem] cursor-pointer'>
+          {data.map((item, index) => (
             <div key={index}>
-                <div className='w-[17rem] h-[26rem] bg-white rounded-[0.6rem] flex flex-col'>
-                    <Image src={item.icon} alt='' className='rounded-t-lg h-[11rem]' />
-                    <div className='flex flex-col justify-center items-start p-[2rem] gap-[0.8rem]'>
-                        <h1 className='text-[0.8rem] font-medium text-[#9f9f9f]'>
-                            {item.by}
-                        </h1>
-                        <h1 className='text-[1.2rem] leading-[1.6rem] font-medium tracking-tight'>
-                            {item.header}
-                        </h1>
-                        <p className='text-[0.8rem] font-medium text-[#9f9f9f]'>
-                            {item.paragraph}
-                        </p>
-                    </div>
+              <div className='w-[17rem] h-[26rem] bg-white rounded-[0.6rem] flex flex-col'>
+                <Image 
+                  src={item.icon} 
+                  alt='' 
+                  className='rounded-t-lg h-[11rem]' 
+                />
+                <div className='flex flex-col justify-center items-start p-[2rem] gap-[0.8rem]'>
+                  <h1 className='text-[0.8rem] font-medium text-[#9f9f9f]'>
+                    {item.by}
+                  </h1>
+                  <h1 className='text-[1.2rem] leading-[1.6rem] font-semibold tracking-tight hover:text-green-500 transition-colors duration-300'>
+                    {item.header}
+                  </h1>
+                  <p className='text-[0.8rem] font-medium text-[#9f9f9f]'>
+                    {item.paragraph}
+                  </p>
                 </div>
+              </div>
             </div>
-        ))}
+          ))}
         </div>
+      </div>
+
+      {/* Mobile view */}
+      <div className='flex justify-center flex-col md:hidden h-[120rem] bg-[#fafafa] px-[1rem]'>
+        <h1 className='text-[2rem] text-center text-[#363636] mt-[1rem]'>
+          Latest Articles
+        </h1>
+        <div className='flex flex-col justify-center items-center mt-[2rem] gap-[2rem]'>
+          {data.map((item, index) => (
+            <div key={index}>
+              <div className='w-[20rem] h-[24rem] bg-white rounded-[0.6rem] flex flex-col'>
+                <Image 
+                  src={item.icon} 
+                  alt='' 
+                  className='rounded-t-lg h-[11rem]' 
+                />
+                <div className='flex flex-col justify-center items-start py-[2rem] px-[1.5rem] gap-[0.8rem]'>
+                  <h1 className='text-[0.8rem] font-medium text-[#9f9f9f]'>
+                    {item.by}
+                  </h1>
+                  <h1 className='text-[1.2rem] leading-[1.6rem] font-medium tracking-tight'>
+                    {item.header}
+                  </h1>
+                  <p className='text-[0.8rem] font-medium text-[#9f9f9f]'>
+                    {item.paragraph}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

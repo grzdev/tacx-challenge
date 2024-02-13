@@ -16,7 +16,7 @@ function Hero() {
                     Take your financial life online. Your Easybank account will be a one-stop-shop 
                     for spending, saving, budgeting, investing, and much more.
                 </p>
-                <button className="w-[11.5rem] h-[3.2rem] rounded-[2rem] bg-gradient-to-r from-green-400 to-cyan-500 text-white ">
+                <button className="w-[11.5rem] h-[3.2rem] rounded-[2rem] bg-gradient-to-r from-green-400 to-cyan-500 text-white hover:opacity-55 transition-opacity duration-300">
                     Request invite
                 </button>
             </div>
@@ -39,7 +39,7 @@ function Hero() {
         </div>
 
         {/* Mobile view */}
-        <div className='flex flex-col h-[54rem] md:hidden bg-[#fafafa] px-[1rem] overflow-x-hidden'>
+        <div className='flex flex-col h-[53rem] md:hidden bg-[#fafafa] px-[1rem] overflow-x-hidden'>
             <div className='absolute inset-0 z-0' style={{ overflowX: 'hidden' }}>
                 <div className='w-[45rem] h-[40rem] overflow-x-hidden'>
                     <Image
@@ -53,7 +53,7 @@ function Hero() {
                     <Image
                         src={bgImg2}
                         alt=""
-                        className=' mt-[-43.3rem] relative z-0'
+                        className=' mt-[-43.8rem] relative z-0'
                     />
                 </div>
             </div>
