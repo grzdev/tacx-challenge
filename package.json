@@ -9,10 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@iconify-icons/mdi": "^1.2.48",
+    "@iconify/react": "^4.1.1",
+    "add": "^2.0.6",
     "framer-motion": "^11.0.3",
     "next": "14.1.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "yarn": "^1.22.21"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
