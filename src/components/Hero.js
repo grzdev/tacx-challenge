@@ -59,15 +59,15 @@ function Hero() {
                 </div>
             </div>
             
-            <div className='flex flex-col z-0 mt-[28rem] justify-center items-center gap-[2rem]' >
-                <h1 className='text-[2.5rem] text-center text-[#363636] leading-[3rem]'>
+            <div className=' animated-content flex flex-col z-0 mt-[28rem] justify-center items-center gap-[2rem]' >
+                <h1 className='animate-slide-up-fade-in text-[2.5rem] text-center text-[#363636] leading-[3rem]'>
                     Next generation digital banking
                 </h1>
-                <p className='text-center text-[#ababab] mt-[-1rem]'>
+                <p className='animate-slide-up-fade-in2 text-center text-[#ababab] mt-[-1rem]'>
                     Take your financial life online. Your Easybank account will be a one-stop-shop 
                     for spending, saving, budgeting, investing, and much more.      
                 </p>
-                <button className="w-[11.5rem] h-[3.2rem] rounded-[2rem] bg-gradient-to-r from-green-400 to-cyan-500 text-white ">
+                <button className="animate-slide-up-fade-in3 w-[11.5rem] h-[3.2rem] rounded-[2rem] bg-gradient-to-r from-green-400 to-cyan-500 text-white ">
                     Request invite
                 </button>
             </div>

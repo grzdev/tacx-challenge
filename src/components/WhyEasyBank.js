@@ -134,21 +134,21 @@ function WhyEasyBank() {
             </div>
           ))}
         </div>
-      </div>
+      </div> 
 
       {/* Mobile view */}
       <div className='flex flex-col items-center md:hidden h-[88rem] bg-[#f0f1f4] px-[1rem]'>
         <div>
-          <h1 className='text-[2rem] mt-[6rem] leading-[2.5rem] text-center text-[#363636]'>
+          <h1 className='text-[2rem] mt-[6rem] leading-[2.5rem] text-center text-[#363636]' ref={animatedDivRef}>
             Why Choose <br/> EasyBank?
           </h1>
-          <p className='mt-[1.6rem] text-center text-[#808080]'>
+          <p className='mt-[1.6rem] text-center text-[#808080]' ref={animatedDivRef2}>
             We leverage Open Banking to turn your bank account into your financial hub. Control 
             your finances like never before.
           </p>
         </div>
 
-        <div className='flex flex-col justify-center items-center mt-[4.55rem] gap-[2.5rem]'>
+        <div className='flex flex-col justify-center items-center mt-[4.55rem] gap-[2.5rem]' ref={animatedFlexRowRef}>
           {data.map((item, index) => (
           <div key={index} className='flex justify-center items-center flex-col gap-[1.2rem]'>
             <Image

@@ -143,10 +143,10 @@ function Articles() {
 
       {/* Mobile view */}
       <div className='flex justify-center flex-col md:hidden h-[120rem] bg-[#fafafa] px-[1rem]'>
-        <h1 className='text-[2rem] text-center text-[#363636] mt-[1rem]'>
+        <h1 className='text-[2rem] text-center text-[#363636] mt-[1rem]' ref={animatedDivRef}>
           Latest Articles
         </h1>
-        <div className='flex flex-col justify-center items-center mt-[2rem] gap-[2rem]'>
+        <div className='flex flex-col justify-center items-center mt-[2rem] gap-[2rem]' ref={animatedDivRef2}>
           {data.map((item, index) => (
             <div key={index}>
               <div className='w-[20rem] h-[24rem] bg-white rounded-[0.6rem] flex flex-col'>
