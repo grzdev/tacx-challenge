@@ -6,6 +6,7 @@ import Logo from "../../design/images/logo.svg"
 import openIcon from "../../design/images/icon-hamburger.svg"
 import closeIcon from "../../design/images/icon-close.svg"
 import { Icon } from '@iconify/react'
+import { motion } from "framer-motion";
 
 
 function Navbar() {
@@ -45,9 +46,15 @@ function Navbar() {
             </div>
 
             <div>
-                <button className="w-[11.5rem] h-[3.2rem] rounded-[2rem] bg-gradient-to-r from-green-400 to-cyan-500 text-white hover:opacity-55 transition-opacity duration-300">
+                {/* <button className="w-[11.5rem] h-[3.2rem] rounded-[2rem] bg-gradient-to-r from-green-400 to-cyan-500 text-white hover:opacity-55 transition-opacity duration-300">
                     Request invite
-                </button>
+                </button> */}
+                <motion.button
+                    className="w-[11.5rem] h-[3.2rem] rounded-[2rem] bg-gradient-to-r from-green-400 to-cyan-500 text-white transition-all duration-300 hover:opacity-55 transition-opacity duration-300"
+                    whileHover={{ scale: 1.1  }}
+                >
+                    Request invite
+                </motion.button>
             </div>
         </nav>
 

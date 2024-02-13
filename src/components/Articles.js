@@ -1,10 +1,13 @@
-import React from 'react'
+"use client"
+
+import React, { useEffect, useRef } from 'react'
 import img1 from "../../design/images/image-confetti.jpg"
 import img2 from "../../design/images/image-currency.jpg"
 import img3 from "../../design/images/image-plane.jpg"
 import img4 from "../../design/images/image-restaurant.jpg"
 import Image from 'next/image'
 
+// article data
 const data = [
     {
       icon: img2,
@@ -33,14 +36,86 @@ const data = [
 ];
 
 function Articles() {
+  // div animation
+  const animatedDivRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-slide-in-from-bottom');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    if (animatedDivRef.current) {
+      observer.observe(animatedDivRef.current);
+    }
+
+    return () => {
+      if (animatedDivRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        observer.unobserve(animatedDivRef.current);
+      }
+    };
+  }, []);
+
+  const animatedDivRef2 = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-slide-in-from-bottom2');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    if (animatedDivRef2.current) {
+      observer.observe(animatedDivRef2.current);
+    }
+
+    return () => {
+      if (animatedDivRef2.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        observer.unobserve(animatedDivRef2.current);
+      }
+    };
+  }, []);
+
+
+  // Image fade in
+  const animatedFlexRowRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in2');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    if (animatedFlexRowRef.current) {
+      observer.observe(animatedFlexRowRef.current);
+    }
+
+    return () => {
+      if (animatedFlexRowRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        observer.unobserve(animatedFlexRowRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div>
       {/* Desktop view */}
       <div className='h-[48rem] bg-[#fafafa] hidden md:flex justify-center items-start gap-[3rem] px-[10rem] flex-col'>
-        <h1 className='text-[2.5rem] text-[#363636] mt-[-1rem]'>
+        <h1 className='text-[2.5rem] text-[#363636] mt-[-1rem]' ref={animatedDivRef}>
           Latest Articles
         </h1>
-        <div className='flex flex-row gap-[1.5rem] cursor-pointer'>
+        <div className='flex flex-row gap-[1.5rem] cursor-pointer' ref={animatedDivRef2}>
           {data.map((item, index) => (
             <div key={index}>
               <div className='w-[17rem] h-[26rem] bg-white rounded-[0.6rem] flex flex-col'>

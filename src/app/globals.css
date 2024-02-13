@@ -34,3 +34,110 @@ body {
 .nav-link:hover::after {
     transform: scaleX(1);
 }
+
+.animated-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.animate-slide-up-fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUpFadeIn 0.5s ease-in-out forwards;
+}
+
+.animate-slide-up-fade-in2 {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUpFadeIn 0.8s ease-in-out forwards;
+}
+
+.animate-slide-up-fade-in3 {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUpFadeIn 1.3s ease-in-out forwards;
+}
+
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-image .animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animated-image .animate-slide-in-from-right {
+  opacity: 0;
+  transform: translateX(50%);
+  animation: slideInFromRight 1s ease-in-out forwards;
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0)  /* Adjust the final position */
+  }
+}
+  
+
+.animate-slide-in-from-bottom {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideInFromBottom 0.9s ease forwards;
+}
+
+.animate-slide-in-from-bottom2 {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideInFromBottom 1.5s ease forwards;
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in2 {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.flex-row-container {
+    opacity: 0;
+}
